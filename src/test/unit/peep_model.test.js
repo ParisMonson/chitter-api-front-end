@@ -1,4 +1,4 @@
-const Api = require("../../controllers/api");
+const PeepModel = require("../../models/peep_model");
 const fetchMock = require("jest-fetch-mock");
 
 fetchMock.enableMocks();
@@ -8,8 +8,8 @@ beforeEach(() => {
 });
 
 it("Initializes", () => {
-  const api = new Api();
-  expect(api).toBeDefined();
+  const model = new PeepModel();
+  expect(model).toBeDefined();
 });
 it("returns a list of peep objects", async () => {
   fetch.mockResponseOnce(
@@ -26,8 +26,8 @@ it("returns a list of peep objects", async () => {
       },
     ])
   );
-  const api = new Api();
-  const peeps = await api.getPeeps();
+  const model = new PeepModel();
+  const peeps = await model.getPeeps();
   expect(fetch).toHaveBeenCalledTimes(1);
   expect(peeps).toEqual([
     {
@@ -41,4 +41,8 @@ it("returns a list of peep objects", async () => {
       },
     },
   ]);
+});
+it("throws an error ", () => {
+  const model = new PeepModel();
+  expect(model).toBeDefined();
 });
