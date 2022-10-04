@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ParisMonson/chitter-api-front-end#readme",
   "dependencies": {
-    "jest": "^29.1.2"
+    "jest": "^29.1.2",
+    "jest-fetch-mock": "^3.0.3"
   }
 }
