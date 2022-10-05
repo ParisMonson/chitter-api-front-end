@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild index.js --bundle --outfile=bundle.js"
+    "build": "esbuild index.js --bundle --outfile=bundle.js",
+    "lint": "./node_modules/.bin/eslint ./"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "jest-fetch-mock": "^3.0.3"
   },
   "devDependencies": {
+    "eslint": "^8.24.0",
     "jest-environment-jsdom": "^29.1.2",
     "jest-environment-jsdom-global": "^4.0.0"
   },
