@@ -17,6 +17,7 @@
           }).catch((error) => {
             console.error(error);
           });
+          console.log("About to return peeps" + peeps);
           return peeps;
         }
       };
@@ -46,6 +47,7 @@
         }
         createParagraphEl(peep) {
           const pEl = document.createElement("p");
+          pEl.classList.add("peep-content");
           pEl.innerHTML = peep.body;
           return pEl;
         }
@@ -77,7 +79,6 @@
           });
         }
         async displayAllPeeps() {
-          console.log(this.model);
           const peeps = await this.model.getPeeps();
           this.view.displayPeeps(peeps);
         }

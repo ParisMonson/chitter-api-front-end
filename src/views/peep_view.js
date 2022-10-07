@@ -18,6 +18,7 @@ class PeepView {
   }
   createParagraphEl(peep) {
     const pEl = document.createElement("p");
+    pEl.classList.add("peep-content");
     pEl.innerHTML = peep.body;
     return pEl;
   }

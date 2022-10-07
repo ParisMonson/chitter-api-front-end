@@ -47,7 +47,7 @@ it("Initializes", () => {
   const controller = new PeepController(modelMock, viewMock);
   expect(controller).toBeDefined();
 });
-it("On click mocked method is called once", async () => {
+it("On click mocked methods are called once", async () => {
   const modelMock = new PeepModel();
   const viewMock = new PeepView();
   const controller = new PeepController(modelMock, viewMock);

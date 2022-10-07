@@ -10,6 +10,7 @@ class PeepModel {
       .catch((error) => {
         console.error(error);
       });
+    console.log("About to return peeps" + peeps);
     return peeps;
   }
 }

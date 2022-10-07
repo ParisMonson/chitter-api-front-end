@@ -1,0 +1,9 @@
+#main-container {
+  width: 500px;
+  margin: 0 auto;
+}
+.peep {
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+}

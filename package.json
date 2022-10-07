@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "eslint": "^8.24.0",
+    "eslint-plugin-jest": "^27.1.0",
     "jest-environment-jsdom": "^29.1.2",
     "jest-environment-jsdom-global": "^4.0.0"
   },
