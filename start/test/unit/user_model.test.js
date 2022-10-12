@@ -20,19 +20,6 @@ it("Initializes", () => {
   expect(model).toBeDefined();
 });
 
-it("returns a a success Object", async () => {
-  fetch.mockResponseOnce(JSON.stringify(successObject));
-  const model = new UserModel();
-  const response = await model.signUp({});
-  expect(response).toEqual(successObject);
-});
-it("returns a a fail Object", async () => {
-  fetch.mockResponseOnce(JSON.stringify(failObject));
-  const model = new UserModel();
-  const response = await model.signUp({});
-  expect(response).toEqual(failObject);
-});
-
 // '{"user": {"handle":"kay", "password":"mypassword"}}'
 
 // {
