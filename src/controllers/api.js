@@ -1,6 +1,5 @@
-class PeepModel {
-  constructor() {}
-  async getPeeps() {
+class Api {
+  getPeeps = async () => {
     let peeps = null;
     await fetch("https://chitter-backend-api-v2.herokuapp.com/peeps")
       .then((response) => response.json())
@@ -12,7 +11,7 @@ class PeepModel {
       });
     console.log("About to return peeps" + peeps);
     return peeps;
-  }
+  };
 }
 
-module.exports = PeepModel;
+module.exports = Api;
