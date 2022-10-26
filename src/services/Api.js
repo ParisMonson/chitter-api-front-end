@@ -9,8 +9,19 @@ class Api {
       .catch((error) => {
         console.error(error);
       });
-    console.log("About to return peeps" + peeps);
     return peeps;
+  };
+  getSinglePeep = async (id) => {
+    let peep = null;
+    await fetch(`https://chitter-backend-api-v2.herokuapp.com/peeps/${id}`)
+      .then((response) => response.json())
+      .then((peepObject) => {
+        peep = peepObject;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    return peep;
   };
 }
 

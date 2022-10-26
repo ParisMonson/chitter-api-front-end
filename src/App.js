@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import PeepView from "./components/PeepView";
-const Api = require("./controllers/api");
+const Api = require("./services/Api");
 // import "./App.css";
 const api = new Api();
 
@@ -20,7 +20,7 @@ function App() {
       .finally(() => {
         setIsLoading(false);
       });
-  });
+  }, []);
   return <PeepView peeps={peeps} />;
 }
 
